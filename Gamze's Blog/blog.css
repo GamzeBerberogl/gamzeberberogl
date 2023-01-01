@@ -1,0 +1,144 @@
+
+:root {
+    --board: #592727;
+    --white: #ffffff;
+    --powder: #DB9CA6;
+    --light-powder: #EEC7AF;
+    --cream: #F2DEBA;
+    --blue: #6099de;
+    --light-blue: #76b6d5;    
+    --grey: #b5d7e8;
+    --new: #911F27;
+    --new2: #b63c3c;
+    --new3: #7c363b;
+}
+
+*, 
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+    
+}
+
+body {
+    font-family: 'Mulish', sans-serif;
+    height: 100vh;
+    min-width: 1600px;
+    background-color: var(--white);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/* Navbar */
+
+.nav-list {
+    display: flex;
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+.nav-list li a {
+    color: var(--powder);
+}
+
+.nav-item {
+    position: relative;
+    transition: .3s;
+    margin: 0 50px;
+}
+
+.nav-item:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 4px;
+    background: var(--light-powder);
+    border-radius: 2px;
+    transition: .3s;
+}
+
+.nav-item:hover:after {
+    width: 100%;
+}
+
+/* Aktif Sayfa */
+
+.nav-list li a.active {
+    color: var(--board);
+    opacity: 7;
+}
+
+.nav-list li a.active:after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 4px;
+    background: var(--board);
+    transition: .3s;
+}
+
+.nav-mob-menu {
+    margin-left: 10px;
+    font-size: 26px;
+    color: var(--powder);
+    cursor: pointer;
+    transition: .3s;
+    display: flex;
+    align-items: center;
+}
+
+.nav-mob {
+    display: none;
+}
+/* Sosyal Medya Butonları */
+
+.social {
+    position: absolute;
+    top: 120px;
+    left: 50px;
+}
+
+.social-item {
+    margin-top: 30px;
+}
+
+.social-link {
+    display: flex;
+    padding: 25px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid var(--grey);
+    background: transparent;
+    font-size: 24px;
+    color: var(--light-blue);
+    transition: .3s;
+}
+
+.social-link:hover{
+    background: var(--light-blue);
+    color: var(--white);
+    transform: scale(1.35);
+}
+
+
+
